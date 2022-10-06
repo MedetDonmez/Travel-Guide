@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "ante-samarzija-CY4ECNh3eEY-unsplash.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "ante-samarzija-CY4ECNh3eEY-unsplash@2x.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "ante-samarzija-CY4ECNh3eEY-unsplash@3x.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
