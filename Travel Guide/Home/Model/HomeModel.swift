@@ -16,6 +16,7 @@ class HomeModel {
     weak var delegate : HomeModelProtocol?
     var posts: News?
 
+    //fetching data and decoding to posts
     func fetchData() {
         
         guard let url = URL.init(string: "https://newsdata.io/api/1/news?apikey=pub_119564c265aa84f67edc5be6e3cb769eba4c4&language=en&category=environment") else {

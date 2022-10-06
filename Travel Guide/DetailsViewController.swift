@@ -26,8 +26,8 @@ class DetailsViewController: UIViewController {
     var titleText: String?
     var imageUrlString: String?
     
-    var rootVc : String?
-    var indexNo = 0
+    var rootVc : String? //this var is need for changing button function add or remove bookmark
+    var indexNo = 0 //new items are added to top so we're going delete index 0, if items just added
     var itemArray = [Item]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -43,13 +43,15 @@ class DetailsViewController: UIViewController {
         alert.layer.shadowOpacity = 0.5
         alert.image = nil
         loadItems()
+        
+        //if user coming from from bookmarks, the button will be remove bookmark
         if rootVc == "bookmarks" {
             bookmarkButton.setImage(UIImage(named: "remove"), for: .normal)
         }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        navigationController?.popToRootViewController(animated: true)
+//        navigationController?.popToRootViewController(animated: true)
         rootVc = ""
     }
     
@@ -61,6 +63,7 @@ class DetailsViewController: UIViewController {
         bookmarkButton.imageView?.image = nil
         bookmarkButton.imageView?.image = UIImage(named: "remove")
         
+        //if root vc is bookmarks or new item just added, button will have delete func
         if rootVc == "bookmarks" {
             rootVc = ""
             saveContext()
@@ -73,8 +76,10 @@ class DetailsViewController: UIViewController {
             }
         }
         
+        //in other situations the button has add functionality
         else {
-            rootVc = "bookmarks"
+            rootVc = "bookmarks" // we are changing the rootVc situation here to avoid
+                                // same item more than once.
             bookmarkButton.imageView?.image = nil
             let newItem = Item(context: self.context)
             newItem.desc = self.detailsText
@@ -87,6 +92,7 @@ class DetailsViewController: UIViewController {
             indexNo = 0
             bookmarkButton.setImage(UIImage(named: "remove"), for: .normal)
             alert.image = UIImage(named: "itemadded")
+            //showing alert after item added
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.alert.image = nil
             }

@@ -219,19 +219,6 @@ struct Address: Decodable {
     let obfuscate: Bool?
 }
 
-//enum CountryCode: Decodable {
-//    case us
-//}
-
-//enum CountryName: Decodable {
-//    case unitedStates
-//}
-
-//enum Region: Decodable {
-//    case nj
-//    case ny
-//}
-
 // MARK: - Badging
 struct Badging: Decodable {
 }

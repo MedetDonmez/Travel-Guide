@@ -181,17 +181,17 @@
                                     <action selector="addClicked:" destination="H77-3p-xTr" eventType="touchUpInside" id="tXh-AE-Qua"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="desc text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkw-2d-93j">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="desc text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkw-2d-93j">
                                 <rect key="frame" x="21" y="480" width="335" height="181"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="181" id="hrA-6j-eoH"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="181" id="hrA-6j-eoH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REg-33-W5s">
-                                <rect key="frame" x="21" y="436" width="66.333333333333329" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="REg-33-W5s">
+                                <rect key="frame" x="21" y="436" width="343" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="qMJ-bH-ViI"/>
                                 </constraints>
@@ -223,6 +223,7 @@
                         <viewLayoutGuide key="safeArea" id="ZJF-RN-55q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="REg-33-W5s" secondAttribute="trailing" constant="10" id="1mQ-0P-0jI"/>
                             <constraint firstItem="REg-33-W5s" firstAttribute="leading" secondItem="ZJF-RN-55q" secondAttribute="leading" constant="21" id="2Iv-kN-Bcd"/>
                             <constraint firstItem="qJh-IZ-hKK" firstAttribute="top" secondItem="Rqi-jU-hyI" secondAttribute="topMargin" constant="29" id="CLd-2D-hEF"/>
                             <constraint firstItem="ZJF-RN-55q" firstAttribute="trailing" secondItem="bkw-2d-93j" secondAttribute="trailing" constant="34" id="N8R-1O-Stc"/>
@@ -239,6 +240,7 @@
                             <constraint firstItem="WsJ-UD-78Z" firstAttribute="top" secondItem="bkw-2d-93j" secondAttribute="bottom" constant="47" id="zqS-de-dnX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="kUy-OI-A4z"/>
                     <connections>
                         <outlet property="alert" destination="uDa-v0-kjW" id="ngU-MO-pHR"/>
                         <outlet property="bookmarkButton" destination="WsJ-UD-78Z" id="uCX-eQ-OVD"/>
@@ -249,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="API-hn-A1b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1200" y="17.772511848341232"/>
+            <point key="canvasLocation" x="-270.76923076923077" y="17.772511848341232"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="Eme-DH-Pg7">
@@ -331,15 +333,15 @@
                     <navigationItem key="navigationItem" id="gLM-qV-4Fk"/>
                     <connections>
                         <outlet property="collectionView" destination="zCg-LH-9ec" id="FOa-sF-B8g"/>
-                        <outlet property="field" destination="ix7-i4-9eu" id="Vie-9u-ldJ"/>
                         <outlet property="flightsTabButton" destination="VqH-Lv-6L9" id="va9-7H-VE0"/>
-                        <outlet property="hotelTabButton" destination="xwV-pe-xEb" id="hfW-Rr-bWe"/>
-                        <outlet property="imageInfo" destination="mUQ-DR-dai" id="bEn-QY-LAH"/>
+                        <outlet property="hotelsTabButton" destination="xwV-pe-xEb" id="hfW-Rr-bWe"/>
+                        <outlet property="noDataImage" destination="mUQ-DR-dai" id="bEn-QY-LAH"/>
+                        <outlet property="searchTextField" destination="ix7-i4-9eu" id="Vie-9u-ldJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anr-9o-jjN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2313.04347826087" y="18.080357142857142"/>
+            <point key="canvasLocation" x="3241.5384615384614" y="17.772511848341232"/>
         </scene>
         <!--Flight View Controller-->
         <scene sceneID="7gt-g9-rn7">
@@ -400,7 +402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhI-nk-kOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="485.50724637681162" y="1452.4553571428571"/>
+            <point key="canvasLocation" x="2343.0769230769229" y="1452.3696682464454"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="oGZ-e7-1cy">
@@ -420,7 +422,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tYs-AI-Ch6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-294" y="20"/>
+            <point key="canvasLocation" x="633.84615384615381" y="19.90521327014218"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jUB-WF-0vY">
@@ -500,7 +502,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oSH-wQ-hwh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-356.92307692307691" y="1452.3696682464454"/>
+            <point key="canvasLocation" x="1501.5384615384614" y="1452.3696682464454"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FUl-Bx-Ecp">
@@ -519,7 +521,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gtt-dx-GyH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1402.8985507246377" y="18.080357142857142"/>
+            <point key="canvasLocation" x="2330.7692307692305" y="17.772511848341232"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZWE-FX-cdb">

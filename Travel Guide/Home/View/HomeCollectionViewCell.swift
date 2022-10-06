@@ -12,11 +12,12 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var descText: UILabel!
     @IBOutlet weak var nameText: UILabel!
     
-    
+    //these variables to get info from home vc.
     var detailsText: String?
     var titleText: String?
     var imageUrlString: String?
-    var index = 0
+    
+    //creating context to add data to it
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var delegate: CellInfoProtocol?
     
@@ -27,6 +28,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
 
     @IBAction func bookmarkClicked(_ sender: Any) {
         
+        //adding new Item and saving it
         let newItem = Item(context: self.context)
         newItem.desc = self.detailsText
         newItem.title = self.titleText

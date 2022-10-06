@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+
+//our model
 struct NewsCellViewModel {
     var name: String
     var desc: String
@@ -14,27 +16,28 @@ struct NewsCellViewModel {
     var details: String?
 }
 
+//Entity part to decode data comes from api
 // MARK: - News
 struct News: Decodable {
     let status: String?
     let totalResults: Int?
-    let results: [NewsInfo]?
+    let results: [NewsInfo]
     let nextPage: Int?
 }
 
 // MARK: - NewsInfo
 struct NewsInfo: Decodable{
-    let title: String?
+    let title: String
     let link: String?
     let keywords: [String]?
     let creator: [String]?
     let video_url: String?
     let description: String?
     let content: String?
-    let pubDate: String?
+    let pubDate: String
     var image_url: String?
     let source_id: String?
     let country: [String]?
-    let category: [String]?
+    let category: [String]
     let language: String?
 }
