@@ -81,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B62FD08B28F409BA000F90C0 /* DetailsPage */ = {
+			isa = PBXGroup;
+			children = (
+				B6A0715E28EB3038003E73A6 /* DetailsViewController.swift */,
+			);
+			path = DetailsPage;
+			sourceTree = "<group>";
+		};
 		B643FD3228E6266F00026A09 /* Flights */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +152,7 @@
 				B643FD3228E6266F00026A09 /* Flights */,
 				B6A0715328E9BFBA003E73A6 /* Search */,
 				B6F3984928EE22E200B28E0E /* Bookmarks */,
-				B6A0715E28EB3038003E73A6 /* DetailsViewController.swift */,
+				B62FD08B28F409BA000F90C0 /* DetailsPage */,
 				B689966728E3109E00E3BD99 /* Main.storyboard */,
 				B689966D28E3109F00E3BD99 /* Assets.xcassets */,
 				B689966F28E3109F00E3BD99 /* LaunchScreen.storyboard */,

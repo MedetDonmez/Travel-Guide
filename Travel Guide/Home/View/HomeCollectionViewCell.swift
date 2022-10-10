@@ -8,6 +8,7 @@
 import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var bookmarkButton: UIButton!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var descText: UILabel!
     @IBOutlet weak var nameText: UILabel!
@@ -23,6 +24,9 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        bookmarkButton.layer.shadowRadius = 5
+        bookmarkButton.layer.shadowColor = UIColor.black.cgColor
+        bookmarkButton.layer.shadowOpacity = 0.5
         // Initialization code
     }
 

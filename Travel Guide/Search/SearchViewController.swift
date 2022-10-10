@@ -77,10 +77,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, HotelViewMode
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        textField.text = textField.text!.replacingOccurrences(of: "ı", with: "i")
         
-        print(textField.text!)
-        print("dog")
         if searchTabStatus == "hotel" {
             if let text = textField.text {
                 if string.count == 0 {

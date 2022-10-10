@@ -43,7 +43,6 @@ extension HotelViewModel: HotelModelProtocol {
     
     func didDataFetch(_ isSuccess: Bool) {
         if isSuccess {
-            print("amazing")
             let posts = model.posts
             let cellModels = makeViewBasedModel(posts!)
             viewDelegate?.didCellItemFetch(cellModels)

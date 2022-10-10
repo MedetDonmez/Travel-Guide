@@ -70,6 +70,7 @@
             </constraints>
             <size key="customSize" width="292" height="241"/>
             <connections>
+                <outlet property="bookmarkButton" destination="3Ni-IJ-KHL" id="Fy0-Ed-Kr9"/>
                 <outlet property="descText" destination="NKw-nr-2xe" id="fS4-ZN-kUU"/>
                 <outlet property="image" destination="fvi-e7-Lcg" id="vn3-2P-40o"/>
                 <outlet property="nameText" destination="VeD-Hn-u6x" id="XZp-Gb-vAN"/>

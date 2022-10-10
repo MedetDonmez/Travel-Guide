@@ -1,8 +1,8 @@
 //
-//  ImagesViewModel.swift
-//  3in1
+//  CustomCollectionViewCell.swift
+//  Travel Guide
 //
-//  Created by Medet Dönmez on 22.09.2022.
+//  Created by Medet Dönmez on 29.09.2022.
 //
 
 import Foundation
@@ -54,7 +54,6 @@ extension FlightViewModel: FlightModelProtocol {
     
     func didDataFetch(_ isSuccess: Bool) {
         if isSuccess {
-            print("amazing")
             let posts = model.posts
             let cellModels = makeViewBasedModel(posts!)
             viewDelegate?.didCellItemFetch(cellModels)

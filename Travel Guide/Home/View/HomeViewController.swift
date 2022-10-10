@@ -13,7 +13,7 @@ protocol CellInfoProtocol {
 
 
 class HomeViewController: UIViewController {
-    
+ 
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var infoImage: UIImageView!
@@ -40,6 +40,10 @@ class HomeViewController: UIViewController {
     }
     
     func setupUI(){
+        
+        infoImage.layer.shadowRadius = 5
+        infoImage.layer.shadowColor = UIColor.black.cgColor
+        infoImage.layer.shadowOpacity = 0.5
         collectionView.layer.shadowColor = UIColor.black.cgColor
         collectionView.layer.shadowOffset = CGSize(width: 0, height: 2.0)
         collectionView.layer.shadowRadius = 5.0
@@ -97,6 +101,7 @@ extension HomeViewController: UICollectionViewDataSource {
             cell.image.kf.setImage(with: newUrl)
             cell.layer.cornerRadius = 8
             cell.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+            
         }
         
         //we are sending these info to our cell to add data when click the button at top right.
